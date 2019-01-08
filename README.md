@@ -1,4 +1,4 @@
-# project3-LoanDefaultPrediction
+# LoanDefaultPrediction
 
 ## Method
 In summary, the overall approach to this project was to firstly to review course materials and Kaggle for
@@ -11,7 +11,7 @@ The technology used for this project was Jupyter Notebooks, Python, with Scikit-
 libraries. The modeling was run on an iMac quad-core i7 4.2GHz, 40GB RAM, and the runtime of the
 Python code is approximately 80 minutes. The metric used for this report is log-loss as required.
 
-###Data Exploration and Feature Engineering
+### Data Exploration and Feature Engineering
 Each data field was explored for patterns, null values, anomalies, cross-correlations and relationship to the
 loan default rate. Log transforms were tried on the skewed numeric fields but this was of minimal or no
 benefit to so this idea was dropped. Consolidation of values in the ‘emp_title’, ‘title’ and ‘zip_code’ fields
@@ -25,7 +25,7 @@ installment, but both were retained as there may still be some information avail
 these NA’s were replaced with zeros. The ‘earliest_cr_line’ field was converted to an integer offset from
 Jan-1950 to aid modelling.
 
-###Algorithms
+### Algorithms
 A broad range of algorithms were applied (with basic tuning) using a 10% sample of the train/test data from
 each of the three folds provided, to determine their potential – results shown in Figure 1 below. Clearly logloss
 performance was the main criteria, but run-time was also important due to the relatively high volume of
